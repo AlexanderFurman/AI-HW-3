@@ -50,22 +50,22 @@ def example_driver():
     mdp.print_rewards()
 
 
-    print('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@')
-    print("@@@@@@@@@ Value iteration @@@@@@@@@")
-    print('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@')
+    # print('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@')
+    # print("@@@@@@@@@ Value iteration @@@@@@@@@")
+    # print('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@')
 
-    U = [[0, 0, 0, 0],
-         [0, 0, 0, 0],
-         [0, 0, 0, 0]]
+    # U = [[0, 0, 0, 0],
+    #      [0, 0, 0, 0],
+    #      [0, 0, 0, 0]]
 
-    print("\nInitial utility:")
-    mdp.print_utility(U)
-    print("\nFinal utility:")
-    U_new = value_iteration(mdp, U)
-    mdp.print_utility(U_new)
-    print("\nFinal policy:")
-    policy = get_policy(mdp, U_new)
-    mdp.print_policy(policy)
+    # print("\nInitial utility:")
+    # mdp.print_utility(U)
+    # print("\nFinal utility:")
+    # U_new = value_iteration(mdp, U)
+    # mdp.print_utility(U_new)
+    # print("\nFinal policy:")
+    # policy = get_policy(mdp, U_new)
+    # mdp.print_policy(policy)
 
 
     print('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@')
