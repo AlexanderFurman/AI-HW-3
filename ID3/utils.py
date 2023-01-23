@@ -38,7 +38,7 @@ def accuracy(y: np.array, y_pred: np.array):
     assert y.ndim == 1
 
     # ====== YOUR CODE: ======
-    raise NotImplementedError
+    accuracy_val = np.sum(y == y_pred)/len(y)
     # ========================
 
     return accuracy_val
@@ -60,7 +60,7 @@ def l2_dist(x1: np.array, x2: np.array):
     dists = None
 
     # ====== YOUR CODE: ======
-    raise NotImplementedError
+    dists = np.array([[np.linalg.norm(i-j) for j in x2] for i in x1])
     # ========================
 
     return dists
