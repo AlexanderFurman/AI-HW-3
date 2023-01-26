@@ -1,6 +1,5 @@
 import numbers
 
-
 def class_counts(rows, labels):
     """
     Counts the number of each type of example in a dataset.
@@ -112,3 +111,4 @@ class DecisionNode:
         “informal” or nicely printable string representation of an object
         """
         return str(self.question)
+

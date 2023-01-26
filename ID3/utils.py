@@ -14,7 +14,7 @@ from sklearn.model_selection import KFold
 ========================================================================
 """
 
-ID = 123456789  # TODO: change it to your personal ID
+ID = 941180150  # TODO: change it to your personal ID
 random_gen = RandomState(seed=ID)
 print_formatted_values = False
 
@@ -38,6 +38,7 @@ def accuracy(y: np.array, y_pred: np.array):
     assert y.ndim == 1
 
     # ====== YOUR CODE: ======
+    print(y_pred)
     accuracy_val = np.sum(y == y_pred)/len(y)
     # ========================
 
@@ -74,10 +75,13 @@ def load_data_set(clf_type: str):
     """
     assert clf_type in ('ID3', 'KNN'), 'The parameter clf_type must be ID3 or KNN'
     hw_path = str(pathlib.Path(__file__).parent.absolute())
-    dataset_path = hw_path + f"\\{clf_type}-dataset\\"
-    train_file_path = dataset_path + "\\train.csv"
-    test_file_path = dataset_path + "\\test.csv"
+    # dataset_path = hw_path + f"\\{clf_type}-dataset\\"
+    # train_file_path = dataset_path + "\\train.csv"
+    # test_file_path = dataset_path + "\\test.csv"
     # Import all columns omitting the fist which consists the names of the attributes
+    dataset_path = hw_path + f"/{clf_type}-dataset"
+    train_file_path = dataset_path + "/train.csv"
+    test_file_path = dataset_path + "/test.csv"
     train_dataset = pd.read_csv(train_file_path)
     test_dataset = pd.read_csv(test_file_path)
     attributes_names = list(pd.read_csv(train_file_path, delimiter=",", dtype=str, nrows=1).keys())
