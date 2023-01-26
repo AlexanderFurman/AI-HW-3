@@ -38,7 +38,6 @@ def accuracy(y: np.array, y_pred: np.array):
     assert y.ndim == 1
 
     # ====== YOUR CODE: ======
-    print(y_pred)
     accuracy_val = np.sum(y == y_pred)/len(y)
     # ========================
 
